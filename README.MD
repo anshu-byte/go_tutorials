@@ -1,1 +1,1 @@
-### coding snippets inspired by AlexMux [video](https://youtu.be/8uiZC0l4Ajw?feature=shared)
+### Coding snippets inspired by AlexMux [video](https://youtu.be/8uiZC0l4Ajw?feature=shared)

@@ -1,4 +1,4 @@
-module go_tutorials
+module example/8_todo-go
 
 go 1.23.2
 

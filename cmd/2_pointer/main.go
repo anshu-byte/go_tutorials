@@ -6,7 +6,10 @@ func main(){
 	var i int32
 	fmt.Println(p)
 
+	// pointer is a variable that holds the address of another variable
+	// assign memory pointer to p1
 	var p1 *int32 = new(int32)
+	fmt.Println(p1)
 	fmt.Println(*p1)
 	*p1 = 10
 	fmt.Println(*p1)

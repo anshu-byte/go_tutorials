@@ -18,6 +18,7 @@ func main(){
 		wg.Add(1)
 		go dbCall(i)
 	}
+	fmt.Println("Waiting for routines to finish...")
 	wg.Wait()
 	fmt.Printf("Time elapsed: %v\n", time.Since(t0))
 	fmt.Printf("Results: %v\n", results)

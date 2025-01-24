@@ -145,6 +145,14 @@ func main(){
 	var testSlice2 = make([]int, 0, n)
 	fmt.Printf("Total time without preallocation: %v\n", timeLoop(testSlice, n))
 	fmt.Printf("Total time with preallocation: %v\n", timeLoop(testSlice2, n))
+
+	// best way for slice
+	testSlice3 := make([]int, 0, n)
+	for i:=0; i<5; i++{
+		testSlice3 = append(testSlice3, i)
+	}
+	fmt.Println(testSlice3)
+
 }
 
 func timeLoop(slice []int, n int) time.Duration{

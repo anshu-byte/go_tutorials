@@ -11,13 +11,21 @@ func main(){
 	// var i = <- c // reading should be done after the go routine i.e with process function
 	// fmt.Println(i)
 	go process(c)
-	for i:= range c{
-		fmt.Println(i)
+
+	// if you range over channel then you have to specify defer close(c) in the process function
+	// for i:= range c{
+	// 	fmt.Println(i)
+	// }
+
+	// better way to avoid hanging out the channel
+	for i:=0; i<5; i++{
+		x := <- c
+		fmt.Println(x)
 	}
 }
 
 func process(c chan int){
-	defer close(c)
+	// defer close(c)
 	// c <- 123
 	for i:=0; i<5; i++{
 		c <- i

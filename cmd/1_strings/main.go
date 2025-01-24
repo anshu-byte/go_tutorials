@@ -19,7 +19,7 @@ type electricEngine struct{
 func (e gasEngine) milesLeft() uint8{
 	return e.gallons * e.mpg
 }
-
+	
 func (e electricEngine) milesLeft() uint8{
 	return e.kwh * e.mpkwh
 }
@@ -54,6 +54,7 @@ func main(){
 	}
 	fmt.Println(catStr)
 
+	// efficient for large strings
 	var strBuilder strings.Builder
 	for i := range strSlice{
 		strBuilder.WriteString(strSlice[i])
